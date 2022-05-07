@@ -1,7 +1,7 @@
 {
   "postgreSQL": {
     "database": "ledgerdata_refiner",
-    "username": "refiner",
+    "username": "caibin",
     "password": "123456"
   }
 }

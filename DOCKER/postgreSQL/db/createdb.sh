@@ -6,9 +6,9 @@
 
 echo "Reading variables from JSON file..."
 
-export USER=$(jq .postgreSQL.username ./config.json)
-export DATABASE=$(jq .postgreSQL.database ./config.json)
-export PASSWORD=$(jq .postgreSQL.passwd ./config.json)
+export USER="caibin"
+export DATABASE="ledgerdata_refiner"
+export PASSWORD="123456"
 
 echo "USER=${USER}"
 echo "DATABASE=${DATABASE}"
