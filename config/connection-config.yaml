@@ -246,7 +246,7 @@ organizations:
 #
 orderers:
   orderer.example.com:
-    url: 172.21.0.4:7050
+    url: 172.18.0.4:7050
 
     # these are standard properties defined by the gRPC library
     # they will be passed in as-is to gRPC client constructor
@@ -273,9 +273,9 @@ orderers:
 peers:
   peer0.org1.example.com:
     # this URL is used to send endorsement and query requests
-    url: 172.21.0.2:7051
+    url: 172.18.0.2:7051
     # eventUrl is only needed when using eventhub (default is delivery service)
-    eventUrl: 172.21.0.2:7051
+    eventUrl: 172.18.0.2:7051
 
     grpcOptions:
       ssl-target-name-override: peer0.org1.example.com
@@ -295,9 +295,9 @@ peers:
 
   peer1.org2.example.com:
     # this URL is used to send endorsement and query requests
-    url: 172.21.0.3:7051
+    url: 172.18.0.3:7051
     # eventUrl is only needed when using eventhub (default is delivery service)
-    eventUrl: 172.21.0.3:7051
+    eventUrl: 172.18.0.3:7051
 
     grpcOptions:
       ssl-target-name-override: peer1.org2.example.com
@@ -318,17 +318,17 @@ peers:
 entityMatchers:
   peer:
     - pattern: (\w*)peer0.org1.example.com(\w*)
-      urlSubstitutionExp: grpcs://172.21.0.2:7051
+      urlSubstitutionExp: grpcs://172.18.0.2:7051
       sslTargetOverrideUrlSubstitutionExp: peer0.org1.example.com
       mappedHost: peer0.org1.example.com
     - pattern: (\w*)peer1.org2.example.com(\w*)
-      urlSubstitutionExp: grpcs://172.21.0.3:7051
+      urlSubstitutionExp: grpcs://172.18.0.3:7051
       sslTargetOverrideUrlSubstitutionExp: peer1.org2.example.com
       mappedHost: peer1.org2.example.com
 
 
   orderer:
     - pattern: (\w*)orderer.example.com(\w*)
-      urlSubstitutionExp: grpcs://172.21.0.4:7050
+      urlSubstitutionExp: grpcs://172.18.0.4:7050
       sslTargetOverrideUrlSubstitutionExp: orderer.example.com
       mappedHost: orderer.example.com

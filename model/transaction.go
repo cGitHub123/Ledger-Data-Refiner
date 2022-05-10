@@ -136,7 +136,7 @@ func GetTxsByTimeRange(search TransactionSearch) ([]Transaction, error) {
 	if search.EndTime != "" {
 		tx = tx.Where("created_at <= ?", search.EndTime)
 	}
-	if search.CreateMSP != "" {
+	if search.CreateMSP != "" && search.CreateMSP != "Please select" {
 		tx = tx.Where("create_msp_id = ?", search.CreateMSP)
 	}
 
@@ -160,7 +160,7 @@ func GetTxCountByTimeRange(search TransactionSearch) (int64, error) {
 	if search.EndTime != "" {
 		tx = tx.Where("created_at <= ?", search.EndTime)
 	}
-	if search.CreateMSP != "" {
+	if search.CreateMSP != "" && search.CreateMSP != "Please select" {
 		tx = tx.Where("create_msp_id = ?", search.CreateMSP)
 	}
 
