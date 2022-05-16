@@ -8,10 +8,10 @@ package fabricservice
 import (
 	"github.com/FujitsuLaboratories/ledgerdata-refiner/log"
 	"github.com/FujitsuLaboratories/ledgerdata-refiner/model"
-	fabledger "github.com/hyperledger/fabric-sdk-go/pkg/client/ledger"
-	"github.com/hyperledger/fabric-sdk-go/pkg/core/config"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fab"
-	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
+	fabledger "github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/client/ledger"
+	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/core/config"
+	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/fab"
+	"github.com/VoneChain-CS/fabric-sdk-go-gm/pkg/fabsdk"
 	"github.com/pkg/errors"
 )
 
